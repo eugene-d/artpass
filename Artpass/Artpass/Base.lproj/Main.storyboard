@@ -36,7 +36,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="638"/>
+            <point key="canvasLocation" x="2405" y="-558"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="2Jo-ew-uZw">
@@ -69,7 +69,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuq-Dg-Zf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1137" y="-90"/>
+            <point key="canvasLocation" x="1709" y="-558"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="cho-xY-K71">
+            <objects>
+                <viewController id="aPE-3B-vc5" customClass="HomeSearchView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mRJ-bG-iQa"/>
+                        <viewControllerLayoutGuide type="bottom" id="dHj-uV-6ed"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9cx-SY-Lt2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="eUa-xs-3Tv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Icz-YE-fRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-558"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="kJM-bk-fgb">
+            <objects>
+                <viewController id="eT6-B2-NFl" customClass="HomeNotificationView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hw7-rB-GsV"/>
+                        <viewControllerLayoutGuide type="bottom" id="uVv-eD-BqX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uP0-gX-V1s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notification" id="ENF-cD-Csx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uez-lZ-CAO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3107" y="-558"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Z66-yn-AP3">
+            <objects>
+                <viewController id="4xL-i3-2LG" customClass="HomeProfileView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQe-7O-zQV"/>
+                        <viewControllerLayoutGuide type="bottom" id="a6I-q4-egi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ez0-vV-EWY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="N8E-tP-0eh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThM-3b-8cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3801" y="-558"/>
         </scene>
         <!--Navigation Tab Controller-->
         <scene sceneID="k6c-cR-6BN">
@@ -84,6 +144,9 @@
                     <connections>
                         <segue destination="iAf-Wf-Q7m" kind="relationship" relationship="viewControllers" id="JId-8D-USf"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SXq-NV-2FQ"/>
+                        <segue destination="aPE-3B-vc5" kind="relationship" relationship="viewControllers" id="jZr-nI-cq5"/>
+                        <segue destination="eT6-B2-NFl" kind="relationship" relationship="viewControllers" id="n1x-H7-Wb4"/>
+                        <segue destination="4xL-i3-2LG" kind="relationship" relationship="viewControllers" id="AcU-FF-sMs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSU-Zz-34g" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,6 +10,9 @@
 		5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */; };
 		5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */; };
 		5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */; };
+		5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */; };
+		5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4531C0F395100B0634F /* HomeProfileView.swift */; };
+		5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */; };
 		5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3542D1C0EEA1B00F6226C /* ViewController.swift */; };
 		5CF354541C0F0EE300F6226C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF354531C0F0EE300F6226C /* BaseViewController.swift */; };
 		B308A600870EF3E9DA76C60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B308A8E54AABA603546E3739 /* AppDelegate.swift */; };
@@ -22,6 +25,9 @@
 		5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTabController.swift; sourceTree = "<group>"; };
 		5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBookmarksView.swift; sourceTree = "<group>"; };
 		5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventsListView.swift; sourceTree = "<group>"; };
+		5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchView.swift; sourceTree = "<group>"; };
+		5C8BC4531C0F395100B0634F /* HomeProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProfileView.swift; sourceTree = "<group>"; };
+		5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		5CF354281C0EEA1B00F6226C /* Artpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF3542D1C0EEA1B00F6226C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5CF354531C0F0EE300F6226C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Library/Base classes/View Controller/BaseViewController.swift"; sourceTree = "<group>"; };
@@ -126,6 +132,9 @@
 			children = (
 				5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */,
 				5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */,
+				5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */,
+				5C8BC4531C0F395100B0634F /* HomeProfileView.swift */,
+				5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -227,10 +236,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */,
 				5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */,
 				5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */,
 				5CF354541C0F0EE300F6226C /* BaseViewController.swift in Sources */,
 				B308A600870EF3E9DA76C60C /* AppDelegate.swift in Sources */,
+				5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */,
+				5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */,
 				5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */,
 				5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */,
 			);
