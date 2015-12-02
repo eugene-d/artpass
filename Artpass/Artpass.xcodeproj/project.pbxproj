@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CF3542C1C0EEA1B00F6226C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */; };
+		5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */; };
+		5C8BC44F1C0F1F1F00B0634F /* EventsBookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44D1C0F1F1F00B0634F /* EventsBookmarksViewController.swift */; };
+		5C8BC4501C0F1F1F00B0634F /* EventsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44E1C0F1F1F00B0634F /* EventsListViewController.swift */; };
 		5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3542D1C0EEA1B00F6226C /* ViewController.swift */; };
-		5CF354311C0EEA1B00F6226C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF3542F1C0EEA1B00F6226C /* Main.storyboard */; };
-		5CF354331C0EEA1B00F6226C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF354321C0EEA1B00F6226C /* Assets.xcassets */; };
-		5CF354361C0EEA1B00F6226C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */; };
+		5CF354541C0F0EE300F6226C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF354531C0F0EE300F6226C /* BaseViewController.swift */; };
+		B308A600870EF3E9DA76C60C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B308A8E54AABA603546E3739 /* AppDelegate.swift */; };
+		B308A763C14AC62553323AEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B308A099B5BF5E0E248741FF /* Main.storyboard */; };
+		B308AA935C4C71D5CA902EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B308AD1B472367AB1D8C9FD9 /* Assets.xcassets */; };
+		B308AD09041AF6128DDADB6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B308A45F1A695C37BB9BE27F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTabController.swift; sourceTree = "<group>"; };
+		5C8BC44D1C0F1F1F00B0634F /* EventsBookmarksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsBookmarksViewController.swift; sourceTree = "<group>"; };
+		5C8BC44E1C0F1F1F00B0634F /* EventsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsListViewController.swift; sourceTree = "<group>"; };
 		5CF354281C0EEA1B00F6226C /* Artpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CF3542D1C0EEA1B00F6226C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5CF354301C0EEA1B00F6226C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5CF354321C0EEA1B00F6226C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5CF354351C0EEA1B00F6226C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5CF354371C0EEA1B00F6226C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CF354531C0F0EE300F6226C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Library/Base classes/View Controller/BaseViewController.swift"; sourceTree = "<group>"; };
+		B308A01A2F8E397CE2643BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Artpass/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		B308A3D59404709411B05CB8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		B308A46081CCFEA61C0C93FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Artpass/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		B308A8E54AABA603546E3739 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B308AD1B472367AB1D8C9FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,98 @@
 		5CF3542A1C0EEA1B00F6226C /* Artpass */ = {
 			isa = PBXGroup;
 			children = (
-				5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */,
 				5CF3542D1C0EEA1B00F6226C /* ViewController.swift */,
-				5CF3542F1C0EEA1B00F6226C /* Main.storyboard */,
-				5CF354321C0EEA1B00F6226C /* Assets.xcassets */,
-				5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */,
-				5CF354371C0EEA1B00F6226C /* Info.plist */,
+				5CF354421C0F065200F6226C /* Controllers */,
+				B308A5BED43AEE42AF586B9B /* Application */,
+				B308A68AC1C00B201279310C /* Storyboards */,
+				B308A2DC5A510997E1362A9B /* Resources */,
+				5CF354551C0F0EF600F6226C /* Library */,
+				5CF3545A1C0F184400F6226C /* Views */,
 			);
 			path = Artpass;
+			sourceTree = "<group>";
+		};
+		5CF354421C0F065200F6226C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CF354431C0F066200F6226C /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5CF354431C0F066200F6226C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5CF354551C0F0EF600F6226C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				5CF354561C0F0F0900F6226C /* Base classes */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		5CF354561C0F0F0900F6226C /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				5CF354571C0F0F1300F6226C /* View Controller */,
+			);
+			name = "Base classes";
+			sourceTree = "<group>";
+		};
+		5CF354571C0F0F1300F6226C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5CF354531C0F0EE300F6226C /* BaseViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		5CF3545A1C0F184400F6226C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CF3545B1C0F184B00F6226C /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5CF3545B1C0F184B00F6226C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C8BC44D1C0F1F1F00B0634F /* EventsBookmarksViewController.swift */,
+				5C8BC44E1C0F1F1F00B0634F /* EventsListViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B308A2DC5A510997E1362A9B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B308AD1B472367AB1D8C9FD9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B308A5BED43AEE42AF586B9B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B308A8E54AABA603546E3739 /* AppDelegate.swift */,
+				B308A3D59404709411B05CB8 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B308A68AC1C00B201279310C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B308A45F1A695C37BB9BE27F /* LaunchScreen.storyboard */,
+				B308A099B5BF5E0E248741FF /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CF354361C0EEA1B00F6226C /* LaunchScreen.storyboard in Resources */,
-				5CF354331C0EEA1B00F6226C /* Assets.xcassets in Resources */,
-				5CF354311C0EEA1B00F6226C /* Main.storyboard in Resources */,
+				B308AD09041AF6128DDADB6D /* LaunchScreen.storyboard in Resources */,
+				B308A763C14AC62553323AEF /* Main.storyboard in Resources */,
+				B308AA935C4C71D5CA902EBB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,25 +228,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */,
-				5CF3542C1C0EEA1B00F6226C /* AppDelegate.swift in Sources */,
+				5C8BC44F1C0F1F1F00B0634F /* EventsBookmarksViewController.swift in Sources */,
+				5CF354541C0F0EE300F6226C /* BaseViewController.swift in Sources */,
+				B308A600870EF3E9DA76C60C /* AppDelegate.swift in Sources */,
+				5C8BC4501C0F1F1F00B0634F /* EventsListViewController.swift in Sources */,
+				5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5CF3542F1C0EEA1B00F6226C /* Main.storyboard */ = {
+		B308A099B5BF5E0E248741FF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CF354301C0EEA1B00F6226C /* Base */,
+				B308A46081CCFEA61C0C93FA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */ = {
+		B308A45F1A695C37BB9BE27F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5CF354351C0EEA1B00F6226C /* Base */,
+				B308A01A2F8E397CE2643BF9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -247,7 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Artpass/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -258,7 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = Artpass/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -284,6 +380,7 @@
 				5CF3543C1C0EEA1B00F6226C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
