@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
-        <!--List-->
+        <!--Events List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="EventsListViewController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeEventsListView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,7 +32,7 @@
                             <constraint firstItem="kaf-vk-frn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ycO-e4-1qU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List" id="x31-pS-XCD"/>
+                    <tabBarItem key="tabBarItem" title="Events List" id="x31-pS-XCD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <!--Bookmarks-->
         <scene sceneID="2Jo-ew-uZw">
             <objects>
-                <viewController id="iAf-Wf-Q7m" customClass="EventsBookmarksViewController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iAf-Wf-Q7m" customClass="HomeBookmarksView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JDZ-wM-KHZ"/>
                         <viewControllerLayoutGuide type="bottom" id="el3-pZ-U6K"/>
