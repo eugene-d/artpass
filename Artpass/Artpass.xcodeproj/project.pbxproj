@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */; };
+		5C5453931C0F1D0600F9D1BE /* HomeTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */; };
 		5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */; };
 		5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */; };
 		5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationTabController.swift; sourceTree = "<group>"; };
+		5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabsController.swift; sourceTree = "<group>"; };
 		5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBookmarksView.swift; sourceTree = "<group>"; };
 		5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventsListView.swift; sourceTree = "<group>"; };
 		5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchView.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		5CF354431C0F066200F6226C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5C5453921C0F1D0600F9D1BE /* NavigationTabController.swift */,
+				5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 				5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */,
 				5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */,
 				5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */,
-				5C5453931C0F1D0600F9D1BE /* NavigationTabController.swift in Sources */,
+				5C5453931C0F1D0600F9D1BE /* HomeTabsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -131,10 +131,10 @@
             </objects>
             <point key="canvasLocation" x="3801" y="-558"/>
         </scene>
-        <!--Navigation Tab Controller-->
+        <!--Home Tabs Controller-->
         <scene sceneID="k6c-cR-6BN">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ME6-Yk-cos" customClass="NavigationTabController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ME6-Yk-cos" customClass="HomeTabsController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="F1U-sc-eL6">
                         <autoresizingMask key="autoresizingMask"/>
