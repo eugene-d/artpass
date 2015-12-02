@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5CF3542C1C0EEA1B00F6226C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */; };
+		5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF3542D1C0EEA1B00F6226C /* ViewController.swift */; };
+		5CF354311C0EEA1B00F6226C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF3542F1C0EEA1B00F6226C /* Main.storyboard */; };
+		5CF354331C0EEA1B00F6226C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CF354321C0EEA1B00F6226C /* Assets.xcassets */; };
+		5CF354361C0EEA1B00F6226C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CF354281C0EEA1B00F6226C /* Artpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5CF3542D1C0EEA1B00F6226C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5CF354301C0EEA1B00F6226C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CF354321C0EEA1B00F6226C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CF354351C0EEA1B00F6226C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5CF354371C0EEA1B00F6226C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CF354251C0EEA1B00F6226C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5CF3541F1C0EEA1B00F6226C = {
+			isa = PBXGroup;
+			children = (
+				5CF3542A1C0EEA1B00F6226C /* Artpass */,
+				5CF354291C0EEA1B00F6226C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5CF354291C0EEA1B00F6226C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CF354281C0EEA1B00F6226C /* Artpass.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CF3542A1C0EEA1B00F6226C /* Artpass */ = {
+			isa = PBXGroup;
+			children = (
+				5CF3542B1C0EEA1B00F6226C /* AppDelegate.swift */,
+				5CF3542D1C0EEA1B00F6226C /* ViewController.swift */,
+				5CF3542F1C0EEA1B00F6226C /* Main.storyboard */,
+				5CF354321C0EEA1B00F6226C /* Assets.xcassets */,
+				5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */,
+				5CF354371C0EEA1B00F6226C /* Info.plist */,
+			);
+			path = Artpass;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CF354271C0EEA1B00F6226C /* Artpass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF3543A1C0EEA1B00F6226C /* Build configuration list for PBXNativeTarget "Artpass" */;
+			buildPhases = (
+				5CF354241C0EEA1B00F6226C /* Sources */,
+				5CF354251C0EEA1B00F6226C /* Frameworks */,
+				5CF354261C0EEA1B00F6226C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Artpass;
+			productName = Artpass;
+			productReference = 5CF354281C0EEA1B00F6226C /* Artpass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CF354201C0EEA1B00F6226C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Evgeniy;
+				TargetAttributes = {
+					5CF354271C0EEA1B00F6226C = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 5CF354231C0EEA1B00F6226C /* Build configuration list for PBXProject "Artpass" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CF3541F1C0EEA1B00F6226C;
+			productRefGroup = 5CF354291C0EEA1B00F6226C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CF354271C0EEA1B00F6226C /* Artpass */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CF354261C0EEA1B00F6226C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF354361C0EEA1B00F6226C /* LaunchScreen.storyboard in Resources */,
+				5CF354331C0EEA1B00F6226C /* Assets.xcassets in Resources */,
+				5CF354311C0EEA1B00F6226C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CF354241C0EEA1B00F6226C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CF3542E1C0EEA1B00F6226C /* ViewController.swift in Sources */,
+				5CF3542C1C0EEA1B00F6226C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5CF3542F1C0EEA1B00F6226C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CF354301C0EEA1B00F6226C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5CF354341C0EEA1B00F6226C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CF354351C0EEA1B00F6226C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CF354381C0EEA1B00F6226C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5CF354391C0EEA1B00F6226C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CF3543B1C0EEA1B00F6226C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Artpass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5CF3543C1C0EEA1B00F6226C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Artpass/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CF354231C0EEA1B00F6226C /* Build configuration list for PBXProject "Artpass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF354381C0EEA1B00F6226C /* Debug */,
+				5CF354391C0EEA1B00F6226C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF3543A1C0EEA1B00F6226C /* Build configuration list for PBXNativeTarget "Artpass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CF3543B1C0EEA1B00F6226C /* Debug */,
+				5CF3543C1C0EEA1B00F6226C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CF354201C0EEA1B00F6226C /* Project object */;
+}
