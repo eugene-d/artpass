@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5CD31C7E5E4F920F13AC3F /* Pods_Artpass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8BF931B44E0AF1A46A01F1 /* Pods_Artpass.framework */; };
 		5C5453931C0F1D0600F9D1BE /* HomeTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */; };
 		5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */; };
 		5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57154548FC2DAC8321077353 /* Pods-Artpass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artpass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artpass/Pods-Artpass.release.xcconfig"; sourceTree = "<group>"; };
 		5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabsController.swift; sourceTree = "<group>"; };
 		5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBookmarksView.swift; sourceTree = "<group>"; };
 		5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventsListView.swift; sourceTree = "<group>"; };
@@ -29,11 +31,13 @@
 		5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
 		5CF354281C0EEA1B00F6226C /* Artpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CF354531C0F0EE300F6226C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = "Library/Base classes/View Controller/BaseViewController.swift"; sourceTree = "<group>"; };
+		5E8BF931B44E0AF1A46A01F1 /* Pods_Artpass.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artpass.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B308A01A2F8E397CE2643BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Artpass/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		B308A3D59404709411B05CB8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		B308A46081CCFEA61C0C93FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Artpass/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		B308A8E54AABA603546E3739 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B308AD1B472367AB1D8C9FD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB57EBD6C7D533EF43656468 /* Pods-Artpass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artpass.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Artpass/Pods-Artpass.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5CD31C7E5E4F920F13AC3F /* Pods_Artpass.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12803A78B2BD5FD6349812AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB57EBD6C7D533EF43656468 /* Pods-Artpass.debug.xcconfig */,
+				57154548FC2DAC8321077353 /* Pods-Artpass.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5CF3541F1C0EEA1B00F6226C = {
 			isa = PBXGroup;
 			children = (
 				5CF3542A1C0EEA1B00F6226C /* Artpass */,
 				5CF354291C0EEA1B00F6226C /* Products */,
+				12803A78B2BD5FD6349812AE /* Pods */,
+				FCBA946B9FC5186F4C4A0F06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +178,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		FCBA946B9FC5186F4C4A0F06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BF931B44E0AF1A46A01F1 /* Pods_Artpass.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CF3543A1C0EEA1B00F6226C /* Build configuration list for PBXNativeTarget "Artpass" */;
 			buildPhases = (
+				7C60E1034F6C31EBD0CC636F /* Check Pods Manifest.lock */,
 				5CF354241C0EEA1B00F6226C /* Sources */,
 				5CF354251C0EEA1B00F6226C /* Frameworks */,
 				5CF354261C0EEA1B00F6226C /* Resources */,
+				BF40162283BDC15678F641CD /* Embed Pods Frameworks */,
+				5821AA3F60D335716EA4E0C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +254,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5821AA3F60D335716EA4E0C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artpass/Pods-Artpass-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C60E1034F6C31EBD0CC636F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BF40162283BDC15678F641CD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artpass/Pods-Artpass-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CF354241C0EEA1B00F6226C /* Sources */ = {
@@ -349,6 +424,7 @@
 		};
 		5CF3543B1C0EEA1B00F6226C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB57EBD6C7D533EF43656468 /* Pods-Artpass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
@@ -360,6 +436,7 @@
 		};
 		5CF3543C1C0EEA1B00F6226C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57154548FC2DAC8321077353 /* Pods-Artpass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
