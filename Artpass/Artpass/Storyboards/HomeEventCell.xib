@@ -22,6 +22,7 @@
                             <constraint firstAttribute="height" constant="60" id="kHZ-bR-oJh"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MmZ-Kr-2jq">
@@ -51,6 +52,7 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="cityLabel" destination="Qxb-ff-zv3" id="X0x-dX-ujU"/>
                 <outlet property="dateLabel" destination="MmZ-Kr-2jq" id="ArH-GA-vVX"/>

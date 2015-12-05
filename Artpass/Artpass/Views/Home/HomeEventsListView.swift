@@ -19,6 +19,8 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     var filteredEventList: Array<Event> = []
     
     override func viewDidLoad() {
+        self.navigationItem.title = "ARTPASS"
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -29,6 +31,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         self.searchResultController.searchBar.scopeButtonTitles = scopeButtons
         self.searchResultController.searchBar.sizeToFit()
         self.searchResultController.searchBar.delegate = self
+        self.searchResultController.searchBar.barTintColor = UIColor.blackColor()
         self.tableView.tableHeaderView = self.searchResultController.searchBar
         self.tableView.reloadData()
         
