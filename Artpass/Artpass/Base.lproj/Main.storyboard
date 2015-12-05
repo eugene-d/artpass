@@ -17,10 +17,19 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Events List" id="x31-pS-XCD"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="szM-y3-ETb" id="adj-Vh-Sz1"/>
                         <outlet property="tableView" destination="ccF-6B-3Vd" id="FI6-hw-9LK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="szM-y3-ETb">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="Xmj-0C-SxY"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="W7L-Ce-HJv"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="84v-P9-0dx"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="yGq-sU-0ec"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2405" y="-558"/>
         </scene>
