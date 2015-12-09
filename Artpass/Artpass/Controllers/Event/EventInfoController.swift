@@ -18,6 +18,15 @@ class EventInfoController: UIViewController {
         showEventInfo();
     }
     
+    @IBAction func openLocation(sender: AnyObject) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewControllerWithIdentifier("LocationInfoContoller") as! LocationInfoContoller
+        
+        vc.eventInfo = self.eventInfo
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func showEventInfo() {
         self.eventTitle.text = self.eventInfo!.title!
         self.eventPlace.text = self.eventInfo!.place!.title

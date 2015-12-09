@@ -14,6 +14,7 @@
 		5C7B4A671C1768DF008C21BF /* EventInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A661C1768DF008C21BF /* EventInfoController.swift */; };
 		5C7B4A691C176D8A008C21BF /* EventArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B4A681C176D8A008C21BF /* EventArtistCell.xib */; };
 		5C7B4A6B1C176DE3008C21BF /* EventArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A6A1C176DE3008C21BF /* EventArtistCell.swift */; };
+		5C7B4A6E1C1843B3008C21BF /* LocationInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A6D1C1843B3008C21BF /* LocationInfoController.swift */; };
 		5C7F21251C11864D0006385E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F21241C11864D0006385E /* Events.swift */; };
 		5C7F212A1C11C33B0006385E /* HomeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F21291C11C33B0006385E /* HomeEventCell.xib */; };
 		5C7F212C1C11C7BE0006385E /* HomeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F212B1C11C7BE0006385E /* HomeEventCell.swift */; };
@@ -44,6 +45,7 @@
 		5C7B4A661C1768DF008C21BF /* EventInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventInfoController.swift; path = Event/EventInfoController.swift; sourceTree = "<group>"; };
 		5C7B4A681C176D8A008C21BF /* EventArtistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventArtistCell.xib; sourceTree = "<group>"; };
 		5C7B4A6A1C176DE3008C21BF /* EventArtistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventArtistCell.swift; sourceTree = "<group>"; };
+		5C7B4A6D1C1843B3008C21BF /* LocationInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationInfoController.swift; path = Location/LocationInfoController.swift; sourceTree = "<group>"; };
 		5C7F21241C11864D0006385E /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		5C7F21291C11C33B0006385E /* HomeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeEventCell.xib; sourceTree = "<group>"; };
 		5C7F212B1C11C7BE0006385E /* HomeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			name = Event;
 			sourceTree = "<group>";
 		};
+		5C7B4A6C1C184373008C21BF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B4A6D1C1843B3008C21BF /* LocationInfoController.swift */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		5CD861B21C10DFCE00EB826D /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 		5CF354421C0F065200F6226C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C7B4A6C1C184373008C21BF /* Location */,
 				5C7B4A651C17684D008C21BF /* Event */,
 				5CF354431C0F066200F6226C /* Home */,
 			);
@@ -397,6 +408,7 @@
 				5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */,
 				5C0317561C14F7390090EF44 /* HomeFilterEventsView.swift in Sources */,
 				5C7B4A671C1768DF008C21BF /* EventInfoController.swift in Sources */,
+				5C7B4A6E1C1843B3008C21BF /* LocationInfoController.swift in Sources */,
 				5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */,
 				5C7F212C1C11C7BE0006385E /* HomeEventCell.swift in Sources */,
 				5CD861B61C10E03500EB826D /* Event.swift in Sources */,

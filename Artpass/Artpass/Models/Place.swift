@@ -17,12 +17,14 @@ class Place: Mappable {
     }
     
     func mapping(map: Map) {
+        let transformToDouble = TransformOf<Double, String>(fromJSON: {Double($0!)}, toJSON: {$0.map {String($0)}})
+        
         city <- map["city"]
         title <- map["title"]
         phone <- map["phone"]
         address <- map["address"]
-        lat <- map["lat"]
-        lon <- map["lon"]
+        lat <- (map["lat"], transformToDouble)
+        lon <- (map["lon"], transformToDouble)
         category <- map["category"]
         openingHours <- map["opening_hours"]
         price <- map["price"]

@@ -463,9 +463,9 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="4234" id="idZ-Kk-cDJ"/>
                                                     </constraints>
-                                                    <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sapien quis lacus cursus interdum. Vestibulum placerat quis leo a bibendum. Nulla ornare placerat lorem, vel pulvinar nisl aliquet sit amet. Nullam lacinia, erat sed consequat finibus, lectus urna commodo dui, in vestibulum leo nisi id neque. Nullam dui ligula, porttitor a neque non, interdum convallis arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus non tincidunt enim.
+                                                    <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet sapien quis lacus cursus interdum. Vestibulum placerat quis leo a bibendum. Nulla ornare placerat lorem, vel pulvinar nisl aliquet sit amet. Nullam lacinia, erat sed consequat finibus, lectus urna commodo dui, in vestibulum leo nisi id neque. Nullam dui ligula, porttitor a neque non, interdum convallis arcu. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus non tincidunt enim.
 
-Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin tellus facilisis enim eleifend pharetra. Duis sagittis dui nec rutrum mollis. Nullam sem quam, ullamcorper ut faucibus sed, interdum quis lorem. Vestibulum id leo ante. Suspendisse posuere nibh urna, maximus consequat massa vestibulum at. Aenean enim erat, molestie eu quam nec, dignissim eleifend est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</mutableString>
+Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin tellus facilisis enim eleifend pharetra. Duis sagittis dui nec rutrum mollis. Nullam sem quam, ullamcorper ut faucibus sed, interdum quis lorem. Vestibulum id leo ante. Suspendisse posuere nibh urna, maximus consequat massa vestibulum at. Aenean enim erat, molestie eu quam nec, dignissim eleifend est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -705,10 +705,14 @@ Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location Marker" translatesAutoresizingMaskIntoConstraints="NO" id="td3-QB-uIL" userLabel="Location Marker">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOj-3H-uAJ">
                                         <rect key="frame" x="548" y="206" width="16" height="24"/>
                                         <animations/>
-                                    </imageView>
+                                        <state key="normal" image="Location Marker"/>
+                                        <connections>
+                                            <action selector="openLocation:" destination="OEK-VW-V0d" eventType="touchUpInside" id="zR3-Ds-XYd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -719,16 +723,16 @@ Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin
                                     <constraint firstItem="Fb8-Kl-lCc" firstAttribute="leading" secondItem="aTB-LL-fEi" secondAttribute="leading" id="Gkv-0e-VE0"/>
                                     <constraint firstItem="bmn-YK-xl9" firstAttribute="centerX" secondItem="uaE-Ya-sJf" secondAttribute="centerX" id="Nfj-xd-5UC"/>
                                     <constraint firstItem="hyd-ZN-9IF" firstAttribute="centerX" secondItem="uaE-Ya-sJf" secondAttribute="centerX" id="PEj-9H-aGT"/>
-                                    <constraint firstAttribute="trailing" secondItem="td3-QB-uIL" secondAttribute="trailing" constant="36" id="UhI-hw-HZ7"/>
                                     <constraint firstItem="hyd-ZN-9IF" firstAttribute="top" secondItem="uaE-Ya-sJf" secondAttribute="top" constant="50" id="Umj-bH-6ZA"/>
                                     <constraint firstAttribute="height" constant="250" id="YlX-iI-Stb"/>
                                     <constraint firstItem="bmn-YK-xl9" firstAttribute="leading" secondItem="uaE-Ya-sJf" secondAttribute="leading" id="Z59-qy-3mg"/>
                                     <constraint firstItem="Fb8-Kl-lCc" firstAttribute="leading" secondItem="uaE-Ya-sJf" secondAttribute="leading" constant="8" id="ayV-KH-f5m"/>
                                     <constraint firstAttribute="bottom" secondItem="Fb8-Kl-lCc" secondAttribute="bottom" constant="5" id="mDW-No-EcM"/>
                                     <constraint firstItem="bmn-YK-xl9" firstAttribute="height" secondItem="uaE-Ya-sJf" secondAttribute="height" id="mGK-dl-Jll"/>
+                                    <constraint firstAttribute="trailing" secondItem="fOj-3H-uAJ" secondAttribute="trailing" constant="36" id="qTO-0p-C9z"/>
                                     <constraint firstItem="Fb8-Kl-lCc" firstAttribute="top" secondItem="aTB-LL-fEi" secondAttribute="bottom" constant="-18" id="rsr-V7-Mxk"/>
+                                    <constraint firstItem="fOj-3H-uAJ" firstAttribute="baseline" secondItem="aTB-LL-fEi" secondAttribute="baseline" id="th8-Ea-JVk"/>
                                     <constraint firstItem="bmn-YK-xl9" firstAttribute="top" secondItem="uaE-Ya-sJf" secondAttribute="top" id="vuL-ms-8ns"/>
-                                    <constraint firstItem="td3-QB-uIL" firstAttribute="baseline" secondItem="aTB-LL-fEi" secondAttribute="baseline" id="wH2-vK-UmY"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kM9-Tq-Yte">
@@ -768,6 +772,49 @@ Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WWI-eY-KwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4032" y="205"/>
+        </scene>
+        <!--Location Info Contoller-->
+        <scene sceneID="nLu-sP-Hhl">
+            <objects>
+                <viewController storyboardIdentifier="LocationInfoContoller" id="oWL-35-YAn" customClass="LocationInfoContoller" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="V66-wy-5sy"/>
+                        <viewControllerLayoutGuide type="bottom" id="uNE-xg-vag"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L8f-I8-w3j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-ub-Nm3">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ASH-bo-7RF"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PZY-ub-Nm3" firstAttribute="leading" secondItem="L8f-I8-w3j" secondAttribute="leading" id="C5j-5z-9aS"/>
+                            <constraint firstItem="PZY-ub-Nm3" firstAttribute="top" secondItem="V66-wy-5sy" secondAttribute="bottom" id="ZfF-sc-lTB"/>
+                            <constraint firstItem="PZY-ub-Nm3" firstAttribute="top" secondItem="V66-wy-5sy" secondAttribute="bottom" id="jQk-kC-iNP"/>
+                            <constraint firstAttribute="trailing" secondItem="PZY-ub-Nm3" secondAttribute="trailing" id="oXg-3w-yMQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jQk-kC-iNP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="9ch-XO-Npm"/>
+                    <connections>
+                        <outlet property="mapView" destination="PZY-ub-Nm3" id="Hmq-Xl-SP7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLf-Zw-evc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5513" y="204"/>
         </scene>
         <!--Home Profile View-->
         <scene sceneID="Z66-yn-AP3">
@@ -874,7 +921,6 @@ Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin
         <!--Navigation Controller-->
         <scene sceneID="6sL-Dr-nKA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z7Z-Lq-yeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="NavigationInfoEventViewController" automaticallyAdjustsScrollViewInsets="NO" id="zeh-2Q-Hnx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VxD-eH-sR8">
@@ -888,8 +934,28 @@ Integer placerat consequat sapien, eu gravida leo vehicula sed. Nam sollicitudin
                         <segue destination="OEK-VW-V0d" kind="relationship" relationship="rootViewController" id="aoV-BV-Sfw"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7Z-Lq-yeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3220" y="204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mVD-qh-TAI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i2e-91-s6u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7IB-vM-Rcq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oWL-35-YAn" kind="relationship" relationship="rootViewController" id="H3F-3p-C7v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0or-p3-SEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4701" y="204"/>
         </scene>
     </scenes>
     <resources>
