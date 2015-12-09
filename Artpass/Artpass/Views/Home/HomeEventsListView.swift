@@ -3,7 +3,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
+class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, EventsViewControllerDelegage {
     
     @IBOutlet var tableView: UITableView!
     
@@ -19,6 +19,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     var filteredEventList: Array<Event> = []
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.navigationItem.title = "ARTPASS"
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         
@@ -51,6 +52,22 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
                 }
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? UINavigationController {
+            if let destinationController = vc.visibleViewController as? HomeEventsFilterController {
+                destinationController.eventsControllerDelegate = self
+            }
+        }
+    }
+    
+    func updateEventsFilters() {
+        // TODO update filters options
+    }
+    
+    func getEventList() -> [Event] {
+        return self.eventList
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -112,5 +129,19 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         }
         
         self.tableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewControllerWithIdentifier("EventInfoController") as! EventInfoController
+        
+        if (self.searchResultController.active == true) {
+            vc.eventInfo = self.filteredEventList[indexPath.row]
+        } else {
+            vc.eventInfo = self.eventList[indexPath.row]
+        }
+        
+        vc.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

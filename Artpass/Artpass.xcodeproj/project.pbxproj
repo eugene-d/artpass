@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1F5CD31C7E5E4F920F13AC3F /* Pods_Artpass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E8BF931B44E0AF1A46A01F1 /* Pods_Artpass.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5C0317561C14F7390090EF44 /* HomeFilterEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0317551C14F7390090EF44 /* HomeFilterEventsView.swift */; };
 		5C5453931C0F1D0600F9D1BE /* HomeTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */; };
+		5C7B4A641C1767AC008C21BF /* EventInfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A631C1767AC008C21BF /* EventInfoTableView.swift */; };
+		5C7B4A671C1768DF008C21BF /* EventInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A661C1768DF008C21BF /* EventInfoController.swift */; };
+		5C7B4A691C176D8A008C21BF /* EventArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7B4A681C176D8A008C21BF /* EventArtistCell.xib */; };
+		5C7B4A6B1C176DE3008C21BF /* EventArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A6A1C176DE3008C21BF /* EventArtistCell.swift */; };
 		5C7F21251C11864D0006385E /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F21241C11864D0006385E /* Events.swift */; };
 		5C7F212A1C11C33B0006385E /* HomeEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F21291C11C33B0006385E /* HomeEventCell.xib */; };
 		5C7F212C1C11C7BE0006385E /* HomeEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F212B1C11C7BE0006385E /* HomeEventCell.swift */; };
+		5C7F21501C1391740006385E /* HomeEventsFilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F214F1C1391740006385E /* HomeEventsFilterController.swift */; };
 		5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */; };
 		5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */; };
 		5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */; };
 		5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4531C0F395100B0634F /* HomeProfileView.swift */; };
 		5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */; };
+		5C9A560F1C14FE2A0070A84B /* HomeFilterTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A560E1C14FE2A0070A84B /* HomeFilterTypeView.swift */; };
 		5CD861B61C10E03500EB826D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861B51C10E03500EB826D /* Event.swift */; };
 		5CD861B81C10E06600EB826D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861B71C10E06600EB826D /* Artist.swift */; };
 		5CD861BA1C10F2FF00EB826D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD861B91C10F2FF00EB826D /* Place.swift */; };
@@ -29,17 +36,24 @@
 
 /* Begin PBXFileReference section */
 		57154548FC2DAC8321077353 /* Pods-Artpass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artpass.release.xcconfig"; path = "Pods/Target Support Files/Pods-Artpass/Pods-Artpass.release.xcconfig"; sourceTree = "<group>"; };
+		5C0317551C14F7390090EF44 /* HomeFilterEventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterEventsView.swift; sourceTree = "<group>"; };
 		5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabsController.swift; sourceTree = "<group>"; };
 		5C781E4E1C10F57600EDE4C3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		5C781E501C10F57900EDE4C3 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper.framework"; sourceTree = "<group>"; };
+		5C7B4A631C1767AC008C21BF /* EventInfoTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventInfoTableView.swift; sourceTree = "<group>"; };
+		5C7B4A661C1768DF008C21BF /* EventInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventInfoController.swift; path = Event/EventInfoController.swift; sourceTree = "<group>"; };
+		5C7B4A681C176D8A008C21BF /* EventArtistCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventArtistCell.xib; sourceTree = "<group>"; };
+		5C7B4A6A1C176DE3008C21BF /* EventArtistCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventArtistCell.swift; sourceTree = "<group>"; };
 		5C7F21241C11864D0006385E /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		5C7F21291C11C33B0006385E /* HomeEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeEventCell.xib; sourceTree = "<group>"; };
 		5C7F212B1C11C7BE0006385E /* HomeEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventCell.swift; sourceTree = "<group>"; };
+		5C7F214F1C1391740006385E /* HomeEventsFilterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventsFilterController.swift; sourceTree = "<group>"; };
 		5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBookmarksView.swift; sourceTree = "<group>"; };
 		5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEventsListView.swift; sourceTree = "<group>"; };
 		5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchView.swift; sourceTree = "<group>"; };
 		5C8BC4531C0F395100B0634F /* HomeProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProfileView.swift; sourceTree = "<group>"; };
 		5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNotificationView.swift; sourceTree = "<group>"; };
+		5C9A560E1C14FE2A0070A84B /* HomeFilterTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFilterTypeView.swift; sourceTree = "<group>"; };
 		5CD861B51C10E03500EB826D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5CD861B71C10E06600EB826D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		5CD861B91C10F2FF00EB826D /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -73,6 +87,32 @@
 				57154548FC2DAC8321077353 /* Pods-Artpass.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C0317541C14F72C0090EF44 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				5C0317551C14F7390090EF44 /* HomeFilterEventsView.swift */,
+				5C9A560E1C14FE2A0070A84B /* HomeFilterTypeView.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		5C7B4A601C16455C008C21BF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B4A631C1767AC008C21BF /* EventInfoTableView.swift */,
+				5C7B4A6A1C176DE3008C21BF /* EventArtistCell.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		5C7B4A651C17684D008C21BF /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				5C7B4A661C1768DF008C21BF /* EventInfoController.swift */,
+			);
+			name = Event;
 			sourceTree = "<group>";
 		};
 		5CD861B21C10DFCE00EB826D /* Models */ = {
@@ -121,6 +161,7 @@
 		5CF354421C0F065200F6226C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5C7B4A651C17684D008C21BF /* Event */,
 				5CF354431C0F066200F6226C /* Home */,
 			);
 			path = Controllers;
@@ -130,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */,
+				5C7F214F1C1391740006385E /* HomeEventsFilterController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -162,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF3545B1C0F184B00F6226C /* Home */,
+				5C7B4A601C16455C008C21BF /* Event */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +212,7 @@
 		5CF3545B1C0F184B00F6226C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5C0317541C14F72C0090EF44 /* Filter */,
 				5C8BC44D1C0F1F1F00B0634F /* HomeBookmarksView.swift */,
 				5C8BC44E1C0F1F1F00B0634F /* HomeEventsListView.swift */,
 				5C8BC4511C0F38F400B0634F /* HomeSearchView.swift */,
@@ -202,6 +246,7 @@
 				B308A45F1A695C37BB9BE27F /* LaunchScreen.storyboard */,
 				B308A099B5BF5E0E248741FF /* Main.storyboard */,
 				5C7F21291C11C33B0006385E /* HomeEventCell.xib */,
+				5C7B4A681C176D8A008C21BF /* EventArtistCell.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -279,6 +324,7 @@
 			files = (
 				B308AD09041AF6128DDADB6D /* LaunchScreen.storyboard in Resources */,
 				5C7F212A1C11C33B0006385E /* HomeEventCell.xib in Resources */,
+				5C7B4A691C176D8A008C21BF /* EventArtistCell.xib in Resources */,
 				B308A763C14AC62553323AEF /* Main.storyboard in Resources */,
 				B308AA935C4C71D5CA902EBB /* Assets.xcassets in Resources */,
 			);
@@ -339,12 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9A560F1C14FE2A0070A84B /* HomeFilterTypeView.swift in Sources */,
 				5C7F21251C11864D0006385E /* Events.swift in Sources */,
 				5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */,
+				5C7F21501C1391740006385E /* HomeEventsFilterController.swift in Sources */,
+				5C7B4A641C1767AC008C21BF /* EventInfoTableView.swift in Sources */,
+				5C7B4A6B1C176DE3008C21BF /* EventArtistCell.swift in Sources */,
 				5C8BC44F1C0F1F1F00B0634F /* HomeBookmarksView.swift in Sources */,
 				5CF354541C0F0EE300F6226C /* BaseViewController.swift in Sources */,
 				B308A600870EF3E9DA76C60C /* AppDelegate.swift in Sources */,
 				5C8BC4541C0F395100B0634F /* HomeProfileView.swift in Sources */,
+				5C0317561C14F7390090EF44 /* HomeFilterEventsView.swift in Sources */,
+				5C7B4A671C1768DF008C21BF /* EventInfoController.swift in Sources */,
 				5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */,
 				5C7F212C1C11C7BE0006385E /* HomeEventCell.swift in Sources */,
 				5CD861B61C10E03500EB826D /* Event.swift in Sources */,
@@ -468,6 +520,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -484,6 +537,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Artpass/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.top-dev.Artpass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
