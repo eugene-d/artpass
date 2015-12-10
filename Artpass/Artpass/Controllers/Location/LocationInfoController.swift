@@ -28,4 +28,10 @@ class LocationInfoContoller: BaseViewController {
             mapView.addAnnotation(annotation)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationController = segue.destinationViewController as? LocationInfoTableController {
+            destinationController.eventInfo = self.eventInfo
+        }
+    }
 }
