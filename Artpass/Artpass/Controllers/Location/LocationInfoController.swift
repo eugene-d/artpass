@@ -3,6 +3,8 @@ import MapKit
 
 class LocationInfoContoller: BaseViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var navbarTitle: UILabel!
+    @IBOutlet weak var navbarPlace: UILabel!
 
     var eventInfo: Event?
 
@@ -10,6 +12,8 @@ class LocationInfoContoller: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        infoOnNavigationBar()
         eventMapPin()
     }
 
@@ -27,6 +31,11 @@ class LocationInfoContoller: BaseViewController {
             
             mapView.addAnnotation(annotation)
         }
+    }
+    
+    func infoOnNavigationBar() {
+        self.navbarTitle.text = self.eventInfo!.title
+        self.navbarPlace.text = self.eventInfo!.place!.title!
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
