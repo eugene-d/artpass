@@ -43,7 +43,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
                 switch response.result {
                 case .Success:
                     if let eventsResponse = Mapper<Events>().map(response.result.value) {
-                        self.eventList = eventsResponse.events!
+                        self.eventList = Events.orderByDate(eventsResponse.events!)
                         self.tableView.reloadData()
                     }
                     
@@ -97,7 +97,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         
         cell?.titleLabel.text = event.title
         cell?.cityLabel.text = event.place?.city
-        cell?.dateLabel.text = event.dates?.joinWithSeparator("-")
+        cell?.dateLabel.text = Event.eventPeriod(event.dates![0], endPeriod: event.dates![1])
         return cell!
     }
     

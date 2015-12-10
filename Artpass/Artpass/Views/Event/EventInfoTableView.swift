@@ -27,14 +27,8 @@ class EventInfoTableView: UITableViewController {
     }
     
     func assignEventDate() {
-        let inputFormater = NSDateFormatter()
-        inputFormater.timeZone = NSTimeZone(name: "UTC")
-        inputFormater.dateFormat = "YYYY-MM-dd"
-        
-        if let date = inputFormater.dateFromString((self.eventInfo?.dates?.first)!) {
-            let outputFormater = NSDateFormatter()
-            outputFormater.dateFormat = "EEE, d MMM";
-            self.eventDate.text = outputFormater.stringFromDate(date)
+        if let date = self.eventInfo?.dates![0] {
+            self.eventDate.text = Event.dateToFormatedString(date, format: "EEE, d MMM")
         }
     }
     
