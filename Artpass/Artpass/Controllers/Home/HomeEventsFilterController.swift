@@ -1,14 +1,29 @@
 import UIKit
 
+protocol EventTypeFilterDelegate {
+    func addTypeFilter(options: [EventType])
+    func addDateFilter(options: [Period])
+    func addCityFilter(options: [String])
+}
+
 protocol EventsViewControllerDelegage {
     func getEventList() -> [Event];
     func updateEventsFilters();
 }
 
+enum EventFilter: Int {
+    case ByType = 0
+    case ByDate
+    case ByCity
+}
 
 class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate {
     var eventsControllerDelegate: EventsViewControllerDelegage?
     var eventsList: [Event]?
+    
+    var typeFilters = [EventType]()
+    var dateFilters = [Period]()
+    var cityFilters = [String]()
     
     @IBAction func doneAction(sender: UIBarButtonItem) {
         eventsControllerDelegate?.updateEventsFilters()
@@ -23,10 +38,21 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let segueId = segue.identifier {
+            
             switch segueId {
-            case "selectEventType":
-                if let vc = segue.destinationViewController as? HomeFilterTypeView {
+            case "HomeFilterTypeController":
+                if let vc = segue.destinationViewController as? HomeFilterTypeController {
                     vc.tableViewData = availableEventTypes()
+                    vc.eventTypeFilterDelegate = self
+                }
+            case "HomeFilterPlaceController":
+                if let vc = segue.destinationViewController as? HomeFilterPlaceController {
+                    vc.tableViewData = availableCities()
+                    vc.eventTypeFilterDelegate = self
+                }
+            case "HomeFilterPeriodController":
+                if let vc = segue.destinationViewController as? HomeFilterPeriodController {
+                    vc.tableViewData = availableDates()
                     vc.eventTypeFilterDelegate = self
                 }
             default:
@@ -35,25 +61,45 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
-//        cell.textLabel?.text = cell.textLabel!.text! + " - test \(indexPath.section)"
+        var textLabel = ""
+        
+        if indexPath.section == EventFilter.ByType.rawValue {
+            textLabel = self.typeFilters.map{$0.title}.joinWithSeparator(", ")
+        }
+        
+        if indexPath.section == EventFilter.ByDate.rawValue {
+            textLabel = self.dateFilters.map{$0.title}.joinWithSeparator(", ")
+        }
+        
+        if indexPath.section == EventFilter.ByCity.rawValue {
+            textLabel = self.cityFilters.joinWithSeparator(", ")
+        }
+        
+        cell.textLabel?.text = textLabel
         cell.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots"))
         
         return cell
     }
     
-    func addFelterOptions(options: [String]) {
-        print("Got options \(options)")
-        
+    func addTypeFilter(options: [EventType]) {
+        self.typeFilters = options
+        self.tableView.reloadData()
     }
     
-    func availableEventTypes() -> [String] {
-        var eventTypes = [String]()
+    func addDateFilter(options: [Period]) {
+        self.dateFilters = options
+        self.tableView.reloadData()
+    }
+    
+    func addCityFilter(options: [String]) {
+        self.cityFilters = options
+        self.tableView.reloadData()
+    }
+    
+    func availableEventTypes() -> [EventType] {
+        var eventTypes = [EventType]()
         
         if let events = self.eventsList {
             events.forEach({(event) in
@@ -65,7 +111,25 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
         
         return eventTypes
     }
-  
+    
+    func availableCities() -> [String] {
+        var cities = [String]()
+        
+        if let events = self.eventsList {
+            events.forEach({(event) in
+                if (!cities.contains(event.place!.city!)) {
+                    cities.append(event.place!.city!)
+                }
+            })
+        }
+        
+        return cities
+    }
+    
+    func availableDates() -> [Period] {
+        return Period.all()
+    }
+    
     override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let headerView = view as! UITableViewHeaderFooterView
 

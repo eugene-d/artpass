@@ -1,10 +1,6 @@
 import UIKit
 
-protocol EventTypeFilterDelegate {
-    func addFelterOptions(options: [String])
-}
-
-class HomeFilterTypeView: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeFilterPlaceController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     var eventTypeFilterDelegate: EventTypeFilterDelegate?
     
@@ -30,21 +26,21 @@ class HomeFilterTypeView: BaseViewController, UITableViewDelegate, UITableViewDa
         let cell = self.tableView.dequeueReusableCellWithIdentifier("filterType", forIndexPath: indexPath)
         
         cell.textLabel?.text = tableViewData?[indexPath.row]
-        cell.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
+       cell.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-        cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots fill"))
-
+       cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots fill"))
+        
         filterOptions.append(tableViewData![indexPath.row])
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-        cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
+       cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
         
         let option = tableViewData![indexPath.row]
         let optionIndex = filterOptions.indexOf(option)
@@ -53,7 +49,7 @@ class HomeFilterTypeView: BaseViewController, UITableViewDelegate, UITableViewDa
     
     override func willMoveToParentViewController(parent: UIViewController?) {
         if parent == nil {
-            eventTypeFilterDelegate!.addFelterOptions(filterOptions)
+            eventTypeFilterDelegate!.addCityFilter(filterOptions)
         }
     }
 }

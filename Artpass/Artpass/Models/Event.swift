@@ -3,7 +3,7 @@ import ObjectMapper
 
 class Event: Mappable {
     var title: String?
-    var type: String?
+    var type: EventType?
     var dates: [NSDate]?
     var ticketsLeft: Int?
     var overview: String?
@@ -89,8 +89,31 @@ class Event: Mappable {
                 return nil
         })
         
+        let toCategory = TransformOf<EventType, String>(fromJSON: {(value: String?) -> EventType in
+            switch value! {
+                
+            case EventType.Opera.rawValue:
+                return EventType.Opera
+                
+            case EventType.Symphony.rawValue:
+                return EventType.Symphony
+                
+            case EventType.Ballet.rawValue:
+                return EventType.Ballet
+                
+            case EventType.Theatre.rawValue:
+                return EventType.Theatre
+                
+            default:
+                return EventType.Other
+            }
+            
+            }, toJSON: {(value: EventType?) -> String in
+                return (value?.rawValue)!
+        })
+        
         title <- map["title"]
-        type <- map["type"]
+        type <- (map["type"], toCategory)
         dates <- (map["dates"], toDate)
         ticketsLeft <- map["tickets_left"]
         overview <- map["overview"]

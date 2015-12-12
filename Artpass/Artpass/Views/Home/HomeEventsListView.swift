@@ -9,11 +9,11 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     
     let cellIdentifier = "homeEventCell"
     let cellNibFile = "HomeEventCell"
-    let scopeButtons = ["All", "Opera", "Ballet", "Symphony"]
+    let scopeButtons = ["All", EventType.Opera.title, EventType.Ballet.title, EventType.Symphony.title]
     
     var searchResultController: UISearchController!
 
-    let urlData = "https://gist.githubusercontent.com/eugene-d/c9dc0f8c23555e9b0e14/raw/99d2e5f421ec2afb1150551bb688c9e14ffb8fc3/data.json"
+    let urlData = "https://gist.githubusercontent.com/eugene-d/c9dc0f8c23555e9b0e14/raw/b55cc9647d6c04ed21040b06f97fe7ec1bc0ff10/data.json"
     
     var eventList: Array<Event> = []
     var filteredEventList: Array<Event> = []
@@ -69,7 +69,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     func getEventList() -> [Event] {
         return self.eventList
     }
-    
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.searchResultController.active {
             return self.filteredEventList.count
@@ -120,7 +120,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
             let scopeType = self.scopeButtons[selectedScope];
             let searchBlock = NSPredicate {(evaluatedObject, _) in
                 let event = evaluatedObject as! Event
-                return event.type!.caseInsensitiveCompare(scopeType) == NSComparisonResult.OrderedSame
+                return event.type!.title.caseInsensitiveCompare(scopeType) == NSComparisonResult.OrderedSame
             }
             
             let array = (self.eventList as NSArray).filteredArrayUsingPredicate(searchBlock)

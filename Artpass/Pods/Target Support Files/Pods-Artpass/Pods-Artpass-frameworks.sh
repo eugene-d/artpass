@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Artpass/Alamofire.framework"
   install_framework "Pods-Artpass/ObjectMapper.framework"
+  install_framework "Pods-Artpass/SwiftDate.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Artpass/Alamofire.framework"
   install_framework "Pods-Artpass/ObjectMapper.framework"
+  install_framework "Pods-Artpass/SwiftDate.framework"
 fi
