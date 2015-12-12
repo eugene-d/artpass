@@ -329,6 +329,7 @@
 				5CF354261C0EEA1B00F6226C /* Resources */,
 				BF40162283BDC15678F641CD /* Embed Pods Frameworks */,
 				5821AA3F60D335716EA4E0C4 /* Copy Pods Resources */,
+				5CBBB6CF1C1C1B570047303F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -402,6 +403,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Artpass/Pods-Artpass-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5CBBB6CF1C1C1B570047303F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 1bf1277799aa90ab30caeb4a6f98b8ef73e48fe3 8dec79dd93432c91bb2f42c3e38ef904d657d2d62742eb7869850185a16a9e5a";
 		};
 		7C60E1034F6C31EBD0CC636F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
