@@ -9,7 +9,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     
     let cellIdentifier = "homeEventCell"
     let cellNibFile = "HomeEventCell"
-    let scopeButtons = ["All", EventType.Opera.title, EventType.Ballet.title, EventType.Symphony.title]
+    var filterEvents = FilterEvents()
     
     var searchResultController: UISearchController!
 
@@ -29,7 +29,6 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         self.searchResultController = UISearchController(searchResultsController: nil)
         self.searchResultController.searchResultsUpdater = self
         self.searchResultController.dimsBackgroundDuringPresentation = false
-        self.searchResultController.searchBar.scopeButtonTitles = scopeButtons
         self.searchResultController.searchBar.sizeToFit()
         self.searchResultController.searchBar.delegate = self
         self.searchResultController.searchBar.barTintColor = UIColor.blackColor()
@@ -62,8 +61,9 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    func updateEventsFilters() {
-        // TODO update filters options
+    func updateEventsFilters(filters: [CustomFilter: Any]) {
+        self.updateScopeButtons(filters)
+        self.tableView.reloadData()
     }
     
     func getEventList() -> [Event] {
@@ -116,17 +116,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        if (selectedScope > 0) {
-            let scopeType = self.scopeButtons[selectedScope];
-            let searchBlock = NSPredicate {(evaluatedObject, _) in
-                let event = evaluatedObject as! Event
-                return event.type!.title.caseInsensitiveCompare(scopeType) == NSComparisonResult.OrderedSame
-            }
-            
-            let array = (self.eventList as NSArray).filteredArrayUsingPredicate(searchBlock)
-            
-            self.filteredEventList = array as! [Event]
-        }
+        self.filteredEventList = self.filterEvents.applyFilter(selectedScope, forEvents: self.eventList)
         
         self.tableView.reloadData()
     }
@@ -143,5 +133,10 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         
         vc.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func updateScopeButtons(filters: [CustomFilter: Any]) {
+        self.filterEvents.updateFilters(filters)
+        self.searchResultController.searchBar.scopeButtonTitles = self.filterEvents.titles()
     }
 }

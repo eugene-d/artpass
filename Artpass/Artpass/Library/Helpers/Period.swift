@@ -5,6 +5,8 @@ enum Period: String {
     case Tomorrow = "tomorrow"
     case CurrentWeek = "currentWeek"
     case NextWeek = "nextWeek"
+    case CurrentMonth = "currentMonth"
+    case NextMonth = "nextMonth"
     
     var interval: [NSDate] {
         switch self {
@@ -20,6 +22,12 @@ enum Period: String {
             
         case .NextWeek:
             return nextWeekPeriod()
+            
+        case .CurrentMonth:
+            return currentMonthPeriod()
+            
+        case .NextMonth:
+            return nextMonthPeriod()
         }
     }
     
@@ -37,6 +45,12 @@ enum Period: String {
             
         case .NextWeek:
             return "Next Week"
+
+        case .CurrentMonth:
+            return "Current Month"
+            
+        case .NextMonth:
+            return "Next Month"
         }
     }
     
@@ -45,7 +59,9 @@ enum Period: String {
             Period.Today,
             Period.Tomorrow,
             Period.CurrentWeek,
-            Period.NextWeek
+            Period.NextWeek,
+            Period.CurrentMonth,
+            Period.NextMonth
         ]
         
         return periods
@@ -82,6 +98,22 @@ enum Period: String {
         let startMonth = nextWeek.startOf(.Month, inRegion: region)
         let start = (startMonth + nextWeek.firstDayOfWeek()!.days).startOf(.Day, inRegion: region)
         let end = (startMonth + nextWeek.lastDayOfWeek()!.days).endOf(.Day, inRegion: region)
+        return [start, end]
+    }
+    
+    private func currentMonthPeriod() -> [NSDate] {
+        let region = Region.defaultRegion()
+        let today = NSDate()
+        let start = today.startOf(.Month, inRegion: region)
+        let end = today.endOf(.Month, inRegion: region)
+        return [start, end]
+    }
+    
+    private func nextMonthPeriod() -> [NSDate] {
+        let region = Region.defaultRegion()
+        let nextMonth = NSDate() + 1.months
+        let start = nextMonth.startOf(.Month, inRegion: region)
+        let end = nextMonth.endOf(.Month, inRegion: region)
         return [start, end]
     }
 }

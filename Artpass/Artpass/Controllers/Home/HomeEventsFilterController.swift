@@ -1,20 +1,14 @@
 import UIKit
 
-protocol EventTypeFilterDelegate {
-    func addTypeFilter(options: [EventType])
-    func addDateFilter(options: [Period])
-    func addCityFilter(options: [String])
-}
-
 protocol EventsViewControllerDelegage {
     func getEventList() -> [Event];
-    func updateEventsFilters();
+    func updateEventsFilters(cityFilter: [CustomFilter: Any]);
 }
 
-enum EventFilter: Int {
-    case ByType = 0
-    case ByDate
-    case ByCity
+enum CustomFilter: Int {
+    case EventType
+    case Period
+    case City
 }
 
 class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate {
@@ -26,7 +20,12 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
     var cityFilters = [String]()
     
     @IBAction func doneAction(sender: UIBarButtonItem) {
-        eventsControllerDelegate?.updateEventsFilters()
+        let filters: [CustomFilter: Any] = [
+            CustomFilter.EventType: self.typeFilters,
+            CustomFilter.Period: self.dateFilters,
+            CustomFilter.City: self.cityFilters
+        ]
+        self.eventsControllerDelegate?.updateEventsFilters(filters)
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -64,17 +63,18 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAtIndexPath: indexPath)
         var textLabel = ""
-        
-        if indexPath.section == EventFilter.ByType.rawValue {
+
+        switch indexPath.section {
+        case CustomFilter.EventType.rawValue:
             textLabel = self.typeFilters.map{$0.title}.joinWithSeparator(", ")
-        }
-        
-        if indexPath.section == EventFilter.ByDate.rawValue {
+            
+        case CustomFilter.Period.rawValue:
             textLabel = self.dateFilters.map{$0.title}.joinWithSeparator(", ")
-        }
-        
-        if indexPath.section == EventFilter.ByCity.rawValue {
+            
+        case CustomFilter.City.rawValue:
             textLabel = self.cityFilters.joinWithSeparator(", ")
+            
+        default: break
         }
         
         cell.textLabel?.text = textLabel

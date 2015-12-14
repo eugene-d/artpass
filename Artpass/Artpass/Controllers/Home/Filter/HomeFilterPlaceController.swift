@@ -1,8 +1,6 @@
 import UIKit
 
-class HomeFilterPlaceController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    var eventTypeFilterDelegate: EventTypeFilterDelegate?
+class HomeFilterPlaceController: HomeFilterController, UITableViewDelegate, UITableViewDataSource {
     
     var tableViewData: [String]?
     var filterOptions = [String]()
@@ -13,8 +11,6 @@ class HomeFilterPlaceController: BaseViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        
-        self.navigationItem.title = "ARTPASS"
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,24 +19,24 @@ class HomeFilterPlaceController: BaseViewController, UITableViewDelegate, UITabl
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("filterType", forIndexPath: indexPath)
+        let cell = self.tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier, forIndexPath: indexPath)
         
         cell.textLabel?.text = tableViewData?[indexPath.row]
-       cell.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
+        cell.accessoryView = HomeFilterController.uncheckedCellAccessoryView()
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-       cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots fill"))
+        cell!.accessoryView = HomeFilterController.checkedCellAccessoryView()
         
         filterOptions.append(tableViewData![indexPath.row])
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         let cell = self.tableView.cellForRowAtIndexPath(indexPath)
-       cell!.accessoryView = UIImageView.init(image: UIImage.init(named: "Dots clear"))
+        cell!.accessoryView = HomeFilterController.uncheckedCellAccessoryView()
         
         let option = tableViewData![indexPath.row]
         let optionIndex = filterOptions.indexOf(option)
