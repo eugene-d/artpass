@@ -9,6 +9,8 @@ class HomeFilterTypeController: HomeFilterController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }

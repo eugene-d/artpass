@@ -31,6 +31,8 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.eventsList = self.eventsControllerDelegate!.getEventList()
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
     }
@@ -134,8 +136,8 @@ class HomeEventsFilterController: UITableViewController, EventTypeFilterDelegate
         let headerView = view as! UITableViewHeaderFooterView
 
         headerView.textLabel!.text = headerView.textLabel!.text?.capitalizedString
-        headerView.textLabel?.font = UIFont.systemFontOfSize(8.0)
-        headerView.textLabel?.textColor = UIColor(white: 1, alpha: 0.3)
+        headerView.textLabel?.font = UIFont.systemFontOfSize(12.0)
+        headerView.textLabel?.textColor = UIColor(white: 1, alpha: 0.4)
         headerView.contentView.backgroundColor = UIColor.blackColor()
     }
     

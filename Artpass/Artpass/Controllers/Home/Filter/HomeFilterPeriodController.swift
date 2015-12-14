@@ -9,6 +9,8 @@ class HomeFilterPeriodController: HomeFilterController, UITableViewDelegate, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -32,6 +34,15 @@ class HomeFilterPeriodController: HomeFilterController, UITableViewDelegate, UIT
         cell!.accessoryView = HomeFilterController.checkedCellAccessoryView()
         
         filterOptions.append(tableViewData![indexPath.row])
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath)
+        cell!.accessoryView = HomeFilterController.uncheckedCellAccessoryView()
+        
+        let option = tableViewData![indexPath.row]
+        let optionIndex = filterOptions.indexOf(option)
+        filterOptions.removeAtIndex(optionIndex!)
     }
     
     override func willMoveToParentViewController(parent: UIViewController?) {
