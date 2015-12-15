@@ -14,6 +14,12 @@ class HomeFilterController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "ARTPASS"
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: "sendFilter")
+    }
+    
+    func sendFilter() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     class func checkedCellAccessoryView() -> UIImageView {
