@@ -455,8 +455,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="299"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" misplaced="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-MG-xIv">
-                                                    <rect key="frame" x="10" y="8" width="75" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovO-MG-xIv">
+                                                    <rect key="frame" x="10" y="8" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.59607843140000005" green="0.4941176471" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -472,7 +472,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="yjn-m9-n4n" secondAttribute="bottom" id="1fB-nK-IJX"/>
-                                                <constraint firstItem="ovO-MG-xIv" firstAttribute="leading" secondItem="Iwd-6J-m4b" secondAttribute="leadingMargin" constant="5" id="2G5-Yn-qmG"/>
+                                                <constraint firstItem="ovO-MG-xIv" firstAttribute="leading" secondItem="Iwd-6J-m4b" secondAttribute="leadingMargin" constant="2" id="2G5-Yn-qmG"/>
                                                 <constraint firstItem="yjn-m9-n4n" firstAttribute="top" secondItem="ovO-MG-xIv" secondAttribute="bottom" constant="1" id="8HO-tU-4DG"/>
                                                 <constraint firstItem="ovO-MG-xIv" firstAttribute="top" secondItem="Iwd-6J-m4b" secondAttribute="topMargin" id="ay5-jj-rnc"/>
                                                 <constraint firstAttribute="trailing" secondItem="yjn-m9-n4n" secondAttribute="trailing" id="fVq-i5-XRO"/>
