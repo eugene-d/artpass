@@ -898,10 +898,9 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ME6-Yk-cos" customClass="HomeTabsController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="F1U-sc-eL6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="F1U-sc-eL6">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="aPE-3B-vc5" kind="relationship" relationship="viewControllers" id="jZr-nI-cq5"/>

@@ -13,7 +13,7 @@ class LocationInfoContoller: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        infoOnNavigationBar()
+        configureNavigationBar()
         eventMapPin()
     }
 
@@ -33,14 +33,21 @@ class LocationInfoContoller: BaseViewController {
         }
     }
     
-    func infoOnNavigationBar() {
-        self.navbarTitle.text = self.eventInfo!.title
-        self.navbarPlace.text = self.eventInfo!.place!.title!
-    }
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destinationController = segue.destinationViewController as? LocationInfoTableController {
             destinationController.eventInfo = self.eventInfo
         }
+    }
+    
+    func configureNavigationBar() {
+        self.navbarTitle.text = self.eventInfo!.title
+        self.navbarPlace.text = self.eventInfo!.place!.title!
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: "goBack")
+    }
+    
+    func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }

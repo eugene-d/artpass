@@ -13,6 +13,8 @@ class LocationInfoTableController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureNavigationBar()
         showEventInfo()
     }
     
@@ -32,5 +34,14 @@ class LocationInfoTableController: UITableViewController {
                 self.prices.text = priceNatural[2]
             }
         }
+    }
+    
+    func configureNavigationBar() {
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: "goBack")
+    }
+    
+    func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }

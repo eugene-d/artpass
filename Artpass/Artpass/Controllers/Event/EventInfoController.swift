@@ -10,12 +10,9 @@ class EventInfoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clearColor();
-        
-        showEventInfo();
+
+        configureNavigationBar()
+        showEventInfo()
     }
     
     @IBAction func openLocation(sender: AnyObject) {
@@ -50,5 +47,21 @@ class EventInfoController: UIViewController {
         if let destinationController = segue.destinationViewController as? EventInfoTableView {
             destinationController.eventInfo = self.eventInfo
         }
+    }
+    
+    func configureNavigationBar() {
+        if let navigationBar = self.navigationController?.navigationBar {
+            navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
+            navigationBar.shadowImage = UIImage()
+            navigationBar.translucent = true
+            navigationBar.backgroundColor = UIColor.clearColor();
+            navigationBar.tintColor = UIColor.whiteColor()
+        }
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Back"), style: .Plain, target: self, action: "goBack")
+    }
+    
+    func goBack() {
+        self.navigationController?.popViewControllerAnimated(true)
     }
 }
