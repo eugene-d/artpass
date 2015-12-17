@@ -295,10 +295,10 @@
             </objects>
             <point key="canvasLocation" x="3172" y="-558"/>
         </scene>
-        <!--Home Bookmarks View-->
+        <!--Bookmarks Controller-->
         <scene sceneID="2Jo-ew-uZw">
             <objects>
-                <viewController id="iAf-Wf-Q7m" customClass="HomeBookmarksView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iAf-Wf-Q7m" customClass="BookmarksController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JDZ-wM-KHZ"/>
                         <viewControllerLayoutGuide type="bottom" id="el3-pZ-U6K"/>
@@ -326,10 +326,10 @@
             </objects>
             <point key="canvasLocation" x="1709" y="-558"/>
         </scene>
-        <!--Home Search View-->
+        <!--Search Controller-->
         <scene sceneID="cho-xY-K71">
             <objects>
-                <viewController id="aPE-3B-vc5" customClass="HomeSearchView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aPE-3B-vc5" customClass="SearchController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mRJ-bG-iQa"/>
                         <viewControllerLayoutGuide type="bottom" id="dHj-uV-6ed"/>
@@ -345,10 +345,10 @@
             </objects>
             <point key="canvasLocation" x="1033" y="-558"/>
         </scene>
-        <!--Home Notification View-->
+        <!--Inbox Controller-->
         <scene sceneID="kJM-bk-fgb">
             <objects>
-                <viewController id="eT6-B2-NFl" customClass="HomeNotificationView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eT6-B2-NFl" customClass="InboxController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hw7-rB-GsV"/>
                         <viewControllerLayoutGuide type="bottom" id="uVv-eD-BqX"/>
@@ -874,10 +874,10 @@
             </objects>
             <point key="canvasLocation" x="6190" y="336"/>
         </scene>
-        <!--Home Profile View-->
+        <!--Profile Controller-->
         <scene sceneID="Z66-yn-AP3">
             <objects>
-                <viewController id="4xL-i3-2LG" customClass="HomeProfileView" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4xL-i3-2LG" customClass="ProfileController" customModule="Artpass" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sQe-7O-zQV"/>
                         <viewControllerLayoutGuide type="bottom" id="a6I-q4-egi"/>
