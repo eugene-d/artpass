@@ -14,6 +14,8 @@
 		5C1ABEA51C1B17CA002288A0 /* HomeFilterTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ABEA31C1B17CA002288A0 /* HomeFilterTypeController.swift */; };
 		5C1ABEA61C1B17CA002288A0 /* HomeFilterPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ABEA41C1B17CA002288A0 /* HomeFilterPeriodController.swift */; };
 		5C1ABEA81C1B22AA002288A0 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1ABEA71C1B22AA002288A0 /* Period.swift */; };
+		5C45BF8E1C219FE700FABD0B /* FilterScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BF8D1C219FE700FABD0B /* FilterScrollView.swift */; };
+		5C45BF901C221C7000FABD0B /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C45BF8F1C221C7000FABD0B /* FilterButton.swift */; };
 		5C5453931C0F1D0600F9D1BE /* HomeTabsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */; };
 		5C7B4A641C1767AC008C21BF /* EventInfoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A631C1767AC008C21BF /* EventInfoTableView.swift */; };
 		5C7B4A671C1768DF008C21BF /* EventInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7B4A661C1768DF008C21BF /* EventInfoController.swift */; };
@@ -54,6 +56,8 @@
 		5C1ABEA31C1B17CA002288A0 /* HomeFilterTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeFilterTypeController.swift; path = Filter/HomeFilterTypeController.swift; sourceTree = "<group>"; };
 		5C1ABEA41C1B17CA002288A0 /* HomeFilterPeriodController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeFilterPeriodController.swift; path = Filter/HomeFilterPeriodController.swift; sourceTree = "<group>"; };
 		5C1ABEA71C1B22AA002288A0 /* Period.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Period.swift; path = Library/Helpers/Period.swift; sourceTree = "<group>"; };
+		5C45BF8D1C219FE700FABD0B /* FilterScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterScrollView.swift; sourceTree = "<group>"; };
+		5C45BF8F1C221C7000FABD0B /* FilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
 		5C5453921C0F1D0600F9D1BE /* HomeTabsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabsController.swift; sourceTree = "<group>"; };
 		5C781E4E1C10F57600EDE4C3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
 		5C781E501C10F57900EDE4C3 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "Pods/../build/Debug-iphoneos/ObjectMapper.framework"; sourceTree = "<group>"; };
@@ -285,6 +289,8 @@
 				5C8BC4531C0F395100B0634F /* HomeProfileView.swift */,
 				5C8BC4551C0F396700B0634F /* HomeNotificationView.swift */,
 				5C7F212B1C11C7BE0006385E /* HomeEventCell.swift */,
+				5C45BF8D1C219FE700FABD0B /* FilterScrollView.swift */,
+				5C45BF8F1C221C7000FABD0B /* FilterButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C7F21251C11864D0006385E /* Events.swift in Sources */,
+				5C45BF8E1C219FE700FABD0B /* FilterScrollView.swift in Sources */,
 				5C8BC4521C0F38F400B0634F /* HomeSearchView.swift in Sources */,
 				5C7F21501C1391740006385E /* HomeEventsFilterController.swift in Sources */,
 				5C7B4A641C1767AC008C21BF /* EventInfoTableView.swift in Sources */,
@@ -495,6 +502,7 @@
 				5CA83F9C1C18970200125E44 /* LocationInfoTableController.swift in Sources */,
 				5C8BC4561C0F396700B0634F /* HomeNotificationView.swift in Sources */,
 				5C7F212C1C11C7BE0006385E /* HomeEventCell.swift in Sources */,
+				5C45BF901C221C7000FABD0B /* FilterButton.swift in Sources */,
 				5CD861B61C10E03500EB826D /* Event.swift in Sources */,
 				5C8BC4501C0F1F1F00B0634F /* HomeEventsListView.swift in Sources */,
 				5CD861B81C10E06600EB826D /* Artist.swift in Sources */,

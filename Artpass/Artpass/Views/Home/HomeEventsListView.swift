@@ -3,20 +3,21 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate, EventsViewControllerDelegage {
+class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDataSource, EventsViewControllerDelegage, CustomFilterEventsDelegate {
     
     @IBOutlet var tableView: UITableView!
     
     let cellIdentifier = "homeEventCell"
     let cellNibFile = "HomeEventCell"
-    var filterEvents = FilterEvents()
     
-    var searchResultController: UISearchController!
-
     let urlData = "https://gist.githubusercontent.com/eugene-d/c9dc0f8c23555e9b0e14/raw/b55cc9647d6c04ed21040b06f97fe7ec1bc0ff10/data.json"
     
     var eventList: Array<Event> = []
     var filteredEventList: Array<Event> = []
+
+    var scrollView: FilterScrollView!
+    var filterEvents = FilterEvents()
+    var activeEventsFilter = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +27,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        self.searchResultController = UISearchController(searchResultsController: nil)
-        self.searchResultController.searchResultsUpdater = self
-        self.searchResultController.dimsBackgroundDuringPresentation = false
-        self.searchResultController.searchBar.sizeToFit()
-        self.searchResultController.searchBar.delegate = self
-        self.searchResultController.searchBar.barTintColor = UIColor.blackColor()
-        self.tableView.tableHeaderView = self.searchResultController.searchBar
-        self.tableView.reloadData()
-        
+        self.addScrollView()
         
         Alamofire.request(.GET, urlData)
             .validate()
@@ -51,6 +44,19 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
                 }
         }
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollView.updateLayouts()
+    }
+    
+    
+    func addScrollView() {
+        scrollView = FilterScrollView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
+        scrollView.customFilterEventsDelegate = self
+        self.view.addSubview(scrollView)
+        self.scrollView.updateButtons(self.filterEvents.titles())
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -71,7 +77,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.searchResultController.active {
+        if self.activeEventsFilter {
             return self.filteredEventList.count
         } else {
             return self.eventList.count
@@ -89,7 +95,7 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         }
         
         
-        if (self.searchResultController.active) {
+        if self.activeEventsFilter {
             event = self.filteredEventList[indexPath.row]
         } else {
             event = self.eventList[indexPath.row]
@@ -101,31 +107,11 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
         return cell!
     }
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
-        self.filteredEventList.removeAll(keepCapacity: false)
-        
-        let searchBlock = NSPredicate {(evaluatedObject, _) in
-            let event = evaluatedObject as! Event
-            return event.title!.localizedCaseInsensitiveContainsString(self.searchResultController.searchBar.text!)
-        }
-        
-        let array = (self.eventList as NSArray).filteredArrayUsingPredicate(searchBlock)
-        
-        self.filteredEventList = array as! [Event]
-        self.tableView.reloadData()
-    }
-    
-    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        self.filteredEventList = self.filterEvents.applyFilter(selectedScope, forEvents: self.eventList)
-        
-        self.tableView.reloadData()
-    }
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBoard.instantiateViewControllerWithIdentifier("EventInfoController") as! EventInfoController
         
-        if (self.searchResultController.active == true) {
+        if (self.activeEventsFilter) {
             vc.eventInfo = self.filteredEventList[indexPath.row]
         } else {
             vc.eventInfo = self.eventList[indexPath.row]
@@ -137,6 +123,17 @@ class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDa
     
     func updateScopeButtons(filters: [CustomFilter: Any]) {
         self.filterEvents.updateFilters(filters)
-        self.searchResultController.searchBar.scopeButtonTitles = self.filterEvents.titles()
+        self.scrollView.updateButtons(self.filterEvents.titles())
+    }
+    
+    func applyCustomFilter(selectedFilter: Int) {
+        if selectedFilter > 0 {
+            self.activeEventsFilter = true
+            self.filteredEventList = self.filterEvents.applyFilter(selectedFilter, forEvents: self.eventList)
+        } else {
+            self.activeEventsFilter = false
+            self.filteredEventList = []
+        }
+        self.tableView.reloadData()
     }
 }
