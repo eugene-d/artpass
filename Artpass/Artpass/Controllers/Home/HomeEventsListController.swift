@@ -3,7 +3,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 
-class HomeEventsListView: BaseViewController, UITableViewDelegate, UITableViewDataSource, EventsViewControllerDelegage, CustomFilterEventsDelegate {
+class HomeEventsListController: BaseViewController, UITableViewDelegate, UITableViewDataSource, EventsViewControllerDelegage, CustomFilterEventsDelegate {
     
     @IBOutlet var tableView: UITableView!
     
